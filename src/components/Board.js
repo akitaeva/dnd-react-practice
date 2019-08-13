@@ -13,7 +13,7 @@ const Board = ({ knightPosition }) => {
     const piece = isKnightHere ? <Knight /> : null
 
     return (
-      <div key={i} style={{ width: '12.5vw', height: 'auto' }}>
+      <div key={i} style={{ width: '12.5%', height: '12.5%' }}>
         <Square black={black}>{piece}</Square>
       </div>
     )
@@ -28,6 +28,8 @@ const Board = ({ knightPosition }) => {
       style={{
         width: '100%',
         height: '100%',
+        maxWidth: '640px',
+        maxHeight: '640px',
         display: 'flex',
         flexWrap: 'wrap',
       }}
