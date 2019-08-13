@@ -2,6 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+export const observe = (receive) => {
+  const randPos = () => Math.floor(Math.random() * 8)
+  setInterval(() => receive([randPos(), randPos()]), 500)
+}
+
 function App() {
   return (
     <div className="App">
