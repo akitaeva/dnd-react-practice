@@ -1,16 +1,19 @@
-import React from 'react';
+import React from 'react'
 
- const Square = ({ black, children }) => {
-  const fill = black ? 'black' : 'white';
-  const stroke = black ? 'white' : 'black';
+const squareStyle = {
+  width: '100%',
+  height: '100%',
+}
 
+const Square = ({ black, children }) => {
+  const backgroundColor = black ? 'black' : 'white'
+  const color = black ? 'white' : 'black'
   return (
     <div
       style={{
-        backgroundColor: fill,
-        color: stroke,
-        width: '80px',
-        height: '80px',
+        ...squareStyle,
+        color,
+        backgroundColor,
       }}
     >
       {children}
